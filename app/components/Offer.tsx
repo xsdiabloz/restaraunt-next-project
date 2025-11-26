@@ -14,7 +14,7 @@ const Offer = () => {
           of empowerment. Quickly pontificate parallel.
         </p>
         <CountDown />
-        <button className="bg-red-500 text-white rounded-md py-3 px-6">
+        <button className="bg-red-500 text-white rounded-md py-3 px-6 hover:bg-red-400 transition-all duration-300 cursor-pointer">
           Order Now
         </button>
       </div>

@@ -10,9 +10,24 @@ const Navbar = () => {
   return (
     <div className="h-12 text-red-500 p-4 flex justify-between lg:px-20 xl:px-40 items-center border-b-2 border-b-red-500 uppercase md:h-24">
       <div className="hidden md:flex gap-4 flex-1">
-        <Link href="/">Homepage</Link>
-        <Link href="/menu">Menu</Link>
-        <Link href="/">Contact</Link>
+        <Link
+          className="hover:border-b-2 border-b-red-500 transition-all duration-300 cursor-pointer"
+          href="/"
+        >
+          Homepage
+        </Link>
+        <Link
+          className="hover:border-b-2 border-b-red-500 transition-all duration-300 cursor-pointer"
+          href="/menu"
+        >
+          Menu
+        </Link>
+        <Link
+          className="hover:border-b-2 border-b-red-500 transition-all duration-300 cursor-pointer"
+          href="/"
+        >
+          Contact
+        </Link>
       </div>
       <div className="text-xl md:font-bold flex-1 md:text-center">
         <Link href="/">Massimo</Link>

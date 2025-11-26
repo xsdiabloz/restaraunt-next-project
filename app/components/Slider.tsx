@@ -25,13 +25,13 @@ const data: SliderTypes[] = [
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1));
-  //   }, 2000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === data.length - 1 ? 0 : prev + 1));
+    }, 2000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] lg:flex-row bg-fuchsia-50">
@@ -39,7 +39,9 @@ const Slider = () => {
         <h1 className="text-5xl text-center uppercase p-4 md:p-10 md:text-6xl xl:text-7xl">
           {data[currentSlide].title}
         </h1>
-        <button className="bg-red-500 text-white py-4 px-8">Order Now</button>
+        <button className="bg-red-500 hover:bg-red-400 transition-all duration-300 text-white py-4 px-8 rounded-lg cursor-pointer">
+          Order Now
+        </button>
       </div>
       <div className=" relative w-full flex-1">
         <Image
