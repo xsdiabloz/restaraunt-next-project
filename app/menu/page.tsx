@@ -16,10 +16,10 @@ const MenuPage = () => {
             <h1 className="uppercase font-bold text-3xl">{category.title}</h1>
             <p className="text-sm my-8">{category.desc}</p>
             <button
-              className={`hidden 2xl:block text-${
-                category.color === "white" ? "black" : "white"
-              } bg-${
-                category.color === "white" ? "white" : "black"
+              className={`hidden 2xl:block ${
+                category.color === "white"
+                  ? "text-black bg-white"
+                  : "text-white bg-black"
               } py-2 px-4 rounded-md cursor-pointer hover:scale-110 transition-transform duration-300 transition-all`}
             >
               Explore

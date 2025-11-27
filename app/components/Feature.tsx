@@ -21,7 +21,7 @@ const Feature = () => {
                 {pr.title}
               </h1>
               <p className="p-4 2xl:p-8">{pr.desc}</p>
-              <span className="text-xl font-bold">${pr.price}</span>
+              <span className="text-xl font-bold">${pr.price.toFixed(2)}</span>
               <button className="bg-red-500 cursor-pointer hover:bg-red-400 duration-300 transition-all text-white p-2 rounded-md">
                 Add to Cart
               </button>

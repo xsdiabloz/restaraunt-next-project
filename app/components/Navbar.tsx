@@ -5,25 +5,25 @@ import CartIcon from "./CartIcon";
 import Image from "next/image";
 
 const Navbar = () => {
-  const user: boolean = false;
+  const user: boolean = true;
 
   return (
     <div className="h-12 text-red-500 p-4 flex justify-between lg:px-20 xl:px-40 items-center border-b-2 border-b-red-500 uppercase md:h-24">
       <div className="hidden md:flex gap-4 flex-1">
         <Link
-          className="hover:border-b-2 border-b-red-500 transition-all duration-300 cursor-pointer"
+          className="border-b-2 border-b-transparent hover:border-b-red-500 transition-all duration-300 cursor-pointer"
           href="/"
         >
           Homepage
         </Link>
         <Link
-          className="hover:border-b-2 border-b-red-500 transition-all duration-300 cursor-pointer"
+          className="border-b-2 border-b-transparent hover:border-b-red-500 transition-all duration-300 cursor-pointer"
           href="/menu"
         >
           Menu
         </Link>
         <Link
-          className="hover:border-b-2 border-b-red-500 transition-all duration-300 cursor-pointer"
+          className="border-b-2 border-b-transparent hover:border-b-red-500 transition-all duration-300 cursor-pointer"
           href="/"
         >
           Contact
@@ -41,9 +41,19 @@ const Navbar = () => {
           <span>123 456 98</span>
         </div>
         {!user ? (
-          <Link href="/login">Login</Link>
+          <Link
+            className="border-b-2 border-b-transparent hover:border-b-red-500 transition-all duration-300 cursor-pointer"
+            href="/login"
+          >
+            Login
+          </Link>
         ) : (
-          <Link href="/orders">Orders</Link>
+          <Link
+            className="border-b-2 border-b-transparent hover:border-b-red-500 transition-all duration-300 cursor-pointer"
+            href="/orders"
+          >
+            Orders
+          </Link>
         )}
         <CartIcon />
       </div>

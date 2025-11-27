@@ -4,12 +4,14 @@ import React from "react";
 
 const CartIcon = () => {
   return (
-    <div className="flex items-center gap-4">
-      <div className="relative w-8 h-8 md:w-5 md:h-5">
-        <Image src="/cart.png" alt="" fill />
+    <Link href="/cart" className="flex items-center gap-4">
+      <div className="flex items-center gap-4">
+        <div className="relative w-8 h-8 md:w-5 md:h-5">
+          <Image src="/cart.png" alt="" fill />
+        </div>
+        <span>Cart (3)</span>
       </div>
-      <span>Cart (3)</span>
-    </div>
+    </Link>
   );
 };
 
